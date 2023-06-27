@@ -43,7 +43,7 @@ const SearchVideoCard = ({ videoData }) => {
                   notation: "compact",
                   maximumFractionDigits: 1,
                 }).format(VideoDetails?.statistics?.viewCount)}
-                views
+{" views"}
               </span>
               <span className="px-3">•</span>
               <span className="text-sm font-normal">
