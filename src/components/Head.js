@@ -74,7 +74,11 @@ const Head = () => {
               setSearchQuery(e.target.value);
             }}
             onFocus={() => setShowSuggestions(true)}
-            onBlur={() => setShowSuggestions(false)}
+            onBlur={() =>
+              setTimeout(() => {
+                setShowSuggestions(true);
+              }, 0)
+            }
           />
           <button
             className="rounded-r-full border border-gray-400 bg-gray-100 px-3 py-2"
@@ -85,11 +89,11 @@ const Head = () => {
         </div>
         {showSuggestions && (
           <div className="fixed w-[35rem] rounded-lg border border-gray-100 bg-white px-2 py-2 shadow-lg">
-            {suggestions.map((suggestion, index) => (
+            {suggestions.map((suggestion) => (
               <Link
                 to={`/search?q=${suggestion}`}
-                key={index}
-                onClick={() => {
+                onClick={(e) => {
+                  console.log(e.target.value);
                   setSearchQuery(suggestion);
                   setShowSuggestions(false);
                 }}

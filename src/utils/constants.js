@@ -1,4 +1,4 @@
-export const GOOGLE_API_KEY = "AIzaSyBmEFW6GpwkKdMtmmhTa6OHBSq3ZcrQZZw";
+export const GOOGLE_API_KEY = "AIzaSyCaqhahmBUIW31r9EaUCXAhkFsono0FpZQ";
 
 // AIzaSyCaqhahmBUIW31r9EaUCXAhkFsono0FpZQ
 // AIzaSyBmEFW6GpwkKdMtmmhTa6OHBSq3ZcrQZZw
@@ -8,7 +8,7 @@ export const YOUTUBE_VIDEOS_API =
   GOOGLE_API_KEY;
 
 export const YOUTUBE_SUGGESTIONS_API =
-  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+  "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
 export const YOUTUBE_SEARCH_RESULT_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=";

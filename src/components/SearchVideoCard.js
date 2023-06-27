@@ -13,7 +13,7 @@ const SearchVideoCard = ({ videoData }) => {
 
   useEffect(() => {
     getVideoInfo(id?.videoId);
-  }, []);
+  }, [id?.videoId]);
 
   const getVideoInfo = async (videoId) => {
     const data = await fetch(
@@ -25,7 +25,7 @@ const SearchVideoCard = ({ videoData }) => {
   };
 
   return (
-    <Link>
+    <Link key={id?.videoId}>
       <div className="flex px-5 py-4">
         <div className="object-cover">
           <img
